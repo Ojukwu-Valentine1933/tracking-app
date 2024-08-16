@@ -1,0 +1,14 @@
+.form_holder input{
+    color : #FC8A06;
+    border: 2px solid #FC8A06;
+    border-radius: 5px;
+    outline-style: none;
+}
+.btn_holder button{
+    background-color: #FC8A06;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,940 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero_div {
+  height: 600px;
+  width: 100%;
+  border-radius: 17px;
+  display: flex;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.search_button {
+  height: 40px;
+  width: 150px;
+  border-radius: 0 40px 40px 0;
+  background-color: #ff8f00;
+  color: white;
+  border: 3px solid #ff8f00;
+}
+.search_input {
+  height: 40px;
+  width: 200px;
+  border-radius: 40px 0 0 40px;
+  border: 0.5px solid rgb(101, 100, 100);
+  padding-left: 20px;
+}
+.search_div {
+  margin-top: 30px;
+}
+.search_input::placeholder {
+  text-align: center;
+  font-size: 13px;
+}
+.hero_intro {
+  margin-left: 20px;
+}
+.hero_text {
+  padding-top: 150px;
+}
+.curved_div {
+  height: 550px;
+  width: 600px;
+  margin-top: 50px;
+  border-radius: 300px 0 0 0;
+  background-color: #ff8f00;
+  display: flex;
+}
+.hero_img {
+  display: flex;
+}
+.eating_lady {
+  margin-top: 70px;
+  width: 500px;
+}
+.eating_pizza {
+  height: 71%;
+  width: 50%;
+  position: absolute;
+  left: 20%;
+  top: 28.8%;
+}
+.discount_button_div {
+  display: flex;
+}
+.discount_div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.discount_button {
+  margin-left: 50px;
+  width: 150px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+.discount_button:hover {
+  background-color: #ff8f00;
+  color: white;
+}
+.option_button {
+  display: none;
+}
+.discount_text {
+  font-weight: 800;
+  font-size: 20px;
+}
+.discount_food {
+  height: 300px;
+  width: 400px;
+}
+.discountFood_div {
+  margin-top: 50px;
+}
+.order_food {
+  padding: 0 !important;
+  height: 100px;
+  width: 180px !important;
+  margin: 20px;
+}
+.orderFood_img {
+  height: 150px;
+  width: 100%;
+}
+.restaurantDiv {
+  margin-top: 50px !important;
+}
+.restaurantLogo {
+  padding: 0 !important;
+  height: 100px;
+  width: 180px !important;
+  margin: 20px;
+}
+.second_hero_div {
+  height: 400px;
+  width: 100%;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 200px !important;
+}
+
+.second_hero_img {
+  height: 80%;
+  width: 50%;
+  position: absolute;
+  right: 42%;
+  top: 265%;
+}
+
+.second_hero_logo {
+  height: 50px;
+  width: 230px;
+  margin-top: 100px !important;
+}
+.personalised_div {
+  margin-right: 100px;
+}
+.personalised {
+  height: 70px;
+  width: 550px;
+  background-color: black;
+  border-radius: 70px 70px 70px 70px;
+  text-align: right;
+  padding-right: 70px;
+  padding-top: 0px;
+  margin-top: 30px;
+}
+.download_text {
+  color: black;
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 20px;
+}
+.chef {
+  background-image: url("../../assets/chef.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 420px;
+  width: 100% !important;
+  border-radius: 10px;
+  margin: 70px 10px 0 0 !important;
+}
+.dispatchRider {
+  background-image: url("../../assets//dispatch-rider.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 420px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 70px 0 0 10px !important;
+}
+.chef_and_dispatch_div {
+  display: flex;
+}
+.dispatch_chef_text_one {
+  background-color: white;
+  font-size: 13px;
+  border-radius: 0 0 5px 5px;
+  font-weight: 800;
+  height: 30px;
+  width: 220px;
+  text-align: center;
+  margin-left: 70px;
+}
+.dispatch_chef_text_two {
+  color: #ff8f00;
+}
+.dispatch_chef_text_three {
+  color: white;
+}
+.dispatch_chef_text_btn {
+  background-color: #ff8f00;
+  color: wheat;
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px 50px 50px 50px;
+  border: 1px solid #ff8f00;
+  text-align: center;
+}
+.chef_text_div {
+  margin-left: 70px;
+}
+.dispatch_text_div {
+  margin-left: 70px;
+  margin-top: 200px;
+}
+
+/* @media (max-width: 1440px) {
+  .hero_div {
+    height: 600px;
+    width: 100%;
+    border-radius: 17px;
+    display: flex;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .search_button {
+    height: 40px;
+    width: 150px;
+    border-radius: 0 40px 40px 0;
+    background-color: #ff8f00;
+    color: white;
+    border: 3px solid #ff8f00;
+  }
+  .search_input {
+    height: 40px;
+    width: 200px;
+    border-radius: 40px 0 0 40px;
+    border: 0.5px solid rgb(101, 100, 100);
+    padding-left: 20px;
+  }
+  .search_div {
+    margin-top: 30px;
+  }
+  .search_input::placeholder {
+    text-align: center;
+    font-size: 13px;
+  }
+  .hero_intro {
+    margin-left: 20px;
+  }
+  .hero_text {
+    padding-top: 150px;
+  }
+  .curved_div {
+    height: 550px;
+    width: 600px;
+    margin-top: 50px;
+    border-radius: 300px 0 0 0;
+    background-color: #ff8f00;
+    display: flex;
+  }
+  .hero_img {
+    display: flex;
+  }
+  .eating_lady {
+    margin-top: 70px;
+  }
+  .eating_pizza {
+    height: 40% !important;
+    width: 40% !important;
+    position: absolute !important;
+    left: 29% !important;
+    top: 34.5% !important;
+  }
+  .discount_button_div {
+    display: flex;
+  }
+  .discount_div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .discount_button {
+    margin-left: 50px;
+    width: 150px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+  }
+  .discount_button:hover {
+    background-color: #ff8f00;
+    color: white;
+  }
+  .option_button {
+    display: none;
+  }
+  .discount_text {
+    font-weight: 800;
+    font-size: 20px;
+  }
+  .discount_food {
+    height: 300px;
+    width: 400px;
+  }
+  .discountFood_div {
+    margin-top: 50px;
+  }
+  .order_food {
+    padding: 0 !important;
+    height: 100px;
+    width: 180px !important;
+    margin: 20px;
+  }
+  .orderFood_img {
+    height: 150px;
+    width: 100%;
+  }
+  .restaurantDiv {
+    margin-top: 50px !important;
+  }
+  .restaurantLogo {
+    padding: 0 !important;
+    height: 100px;
+    width: 180px !important;
+    margin: 20px;
+  }
+  .second_hero_div {
+    height: 400px;
+    width: 100%;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 200px !important;
+  }
+  .second_hero_img {
+    height: 65% !important;
+    width: 50% !important;
+    position: absolute !important;
+    right: 42% !important;
+    top: 200% !important;
+  }
+
+  .second_hero_logo {
+    height: 50px;
+    width: 230px;
+    margin-top: 100px !important;
+  }
+  .personalised_div {
+    margin-right: 70px;
+  }
+  .personalised {
+    height: 70px;
+    width: 600px;
+    background-color: black;
+    border-radius: 0 70px 70px 0;
+    text-align: right;
+    padding-right: 70px;
+    padding-top: 0px;
+    margin-top: 30px;
+  }
+} */
+ @media (max-width: 1024px) {
+  .hero_div {
+    height: 510px;
+  }
+
+  .curved_div {
+    width: 500px;
+    height: 460px;
+  }
+  .eating_lady {
+    height: 300px;
+    width: 300px;
+    margin-top: 160px;
+  }
+  .eating_pizza {
+    height: 30% !important;
+    width: 40% !important;
+    position: absolute !important;
+    left: 29% !important;
+    top: 45% !important;
+  }
+  .marquee ul {
+    font-size: 20px;
+  }
+  .discount_button_div {
+    display: flex;
+  }
+  .discount_div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .discount_button {
+    margin-left: 10px;
+    width: 150px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+  }
+  .discount_button:hover {
+    background-color: #ff8f00;
+    color: white;
+  }
+  .option_button {
+    display: none;
+  }
+  .discount_food {
+    height: 200px;
+    width: 300px;
+  }
+  .order_food {
+    padding: 0 !important;
+    height: 100px;
+    width: 140px !important;
+    margin: 10px;
+  }
+  .orderFood_img {
+    height: 150px;
+    width: 100px;
+  }
+  .restaurantLogo {
+    padding: 0 !important;
+    height: 100px;
+    width: 140px !important;
+    margin: 10px;
+  }
+  .second_hero_div {
+    height: 470px;
+    width: 100%;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 150px !important;
+  }
+
+  .second_hero_img {
+    height: 50% !important;
+    width: 50% !important;
+    position: absolute !important;
+    right: 45% !important;
+    top: 208% !important;
+  }
+  .personalised_div {
+    margin-right: 30px;
+  }
+  .personalised {
+    height: 50px;
+    width: 470px;
+    background-color: black;
+    border-radius: 0 70px 70px 0;
+    text-align: right;
+    padding-right: 70px;
+    margin-top: 30px;
+  }
+  .personalised span {
+    font-size: 33px !important;
+  }
+  .second_hero_logo {
+    height: 35px;
+    width: 210px;
+    margin-top: 100px !important;
+  }
+  .img_text span {
+    font-size: 45px !important;
+  }
+  .dowloandIcons {
+    height: 50px;
+    width: 300px;
+  }
+  .chef {
+    background-image: url("../../assets/chef.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    width: 100% !important;
+    border-radius: 10px;
+    margin: 70px 5px 50px 0 !important;
+  }
+  .dispatchRider {
+    background-image: url("../../assets//dispatch-rider.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 70px 0 50px 5px !important;
+  }
+  .dispatch_chef_text_one {
+    background-color: white;
+    font-size: 13px;
+    border-radius: 0 0 5px 5px;
+    font-weight: 800;
+    height: 30px;
+    width: 220px;
+    text-align: center;
+    margin-left: 30px;
+  }
+  .dispatch_chef_text_three {
+    color: white;
+  }
+  .dispatch_chef_text_btn {
+    background-color: #ff8f00;
+    color: wheat;
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px 50px 50px 50px;
+    border: 1px solid #ff8f00;
+    text-align: center;
+  }
+  .chef_text_div {
+    margin-left: 70px;
+  }
+  .dispatch_text_div {
+    margin-left: 30px;
+    margin-top: 120px;
+  }
+} 
+
+/* media query for mobile view of 768 */
+ @media (max-width: 768px) {
+  .curved_div {
+    display: none;
+  }
+  .eating_lady {
+    display: none;
+  }
+  .eating_pizza {
+    display: none;
+  }
+  .marquee {
+    display: none;
+  }
+  .feast {
+    text-align: center;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+  }
+  .order {
+    text-align: center;
+  }
+  .postcode {
+    text-align: center;
+  }
+  .hero_text {
+    padding-top: 50px !important;
+  }
+  .hero_div {
+    height: 350px;
+  }
+  .button_div {
+    display: flex;
+    justify-content: center;
+  }
+  .discount_button_div {
+    display: none;
+  }
+  .discount_text {
+    font-size: 11px !important;
+    font-weight: 600;
+  }
+  .option_button {
+    display: block;
+    height: 26px;
+    font-size: 12px;
+  }
+  .option {
+    font-size: 5px;
+  }
+  .discount_food {
+    height: 200px;
+    width: 100%;
+  }
+  .discountFood_img {
+    margin-top: 20px;
+  }
+
+  .order_food {
+    padding: 0 !important;
+    height: 100% !important;
+    width: 210px !important;
+    margin: 15px;
+  }
+  .restaurantLogo {
+    padding: 0 !important;
+    height: 100% !important;
+    width: 210px !important;
+    margin: 15px;
+  }
+  .second_hero_div {
+    height: 595px;
+    width: 100%;
+    border-radius: 17px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 100px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .second_hero_img {
+    height: 50%;
+    width: 50%;
+    right: 30% !important;
+    top: 360% !important;
+  }
+  .personalised_div {
+    margin-right: 0px !important;
+    display: row !important;
+    justify-content: left !important;
+  }
+  .img_and_personalised {
+    display: row !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  .personalised {
+    height: 50px;
+    width: 470px;
+    background-color: white!;
+    border-radius: 0 0 0 0 !important;
+    text-align: center;
+    padding-right: 0px !important;
+    margin-top: 0px !important;
+  }
+  .personalised span {
+    font-size: 33px !important;
+  }
+  .second_hero_logo {
+    height: 40px;
+    width: 210px;
+    margin-top: 45px !important;
+  }
+  .img_text span {
+    font-size: 40px !important;
+    margin-top: 35px !important;
+  }
+} 
+
+ @media (min-width: 375px) and (max-width: 479px) {
+  .curved_div {
+    display: none;
+  }
+  .eating_lady {
+    display: none;
+  }
+  .eating_pizza {
+    display: none;
+  }
+
+  .feast {
+    text-align: center;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+  }
+  .order {
+    text-align: center;
+  }
+  .postcode {
+    text-align: center;
+  }
+  .hero_text {
+    padding-top: 50px !important;
+  }
+  .hero_div {
+    height: 350px;
+  }
+  .button_div {
+    display: flex;
+    justify-content: center;
+  }
+  .discount_button_div {
+    display: none;
+  }
+  .discount_text {
+    font-size: 11px !important;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  .option_button {
+    display: block;
+    height: 26px;
+    font-size: 12px;
+    margin-top: 40px;
+  }
+  .option {
+    font-size: 5px;
+  }
+  .discount_food {
+    height: 200px;
+    width: 100%;
+  }
+  .discountFood_img {
+    margin-top: 20px;
+  }
+
+  .order_food {
+    padding: 0px !important;
+    height: 100% !important;
+    width: 45% !important;
+    margin: 10px auto !important; 
+  }
+  .restaurantLogo {
+    padding: 0px !important;
+    height: 100% !important;
+    width: 45% !important;
+    margin: 10px auto !important; 
+  }
+  .second_hero_div {
+    height: 600px;
+    width: 100%;
+    border-radius: 17px;
+    display: none;
+    justify-content: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 200px !important;
+  }
+
+  .second_hero_img {
+    height: 50% !important;
+    width: 100% !important;
+    position: absolute !important;
+    right: 0% !important;
+    top: 495% !important;
+  }
+
+  .second_hero_logo {
+    height: 32px !important;
+    width: 120px !important;
+    margin-top: 50px !important;
+  }
+
+  .personalised {
+    height: 50px;
+    width: 350px;
+    background-color: black;
+    border-radius: 70px 70px 70px 70px !important;
+    padding: 5px 0 0 0;
+  }
+  .personalised span {
+    font-size: 20px !important;
+  }
+  .download_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 20px;
+  }
+  .chef {
+    display: none;
+  }
+  .dispatchRider {
+    display: none;
+  }
+  .dispatch_chef_text_one {
+    display: none;
+  }
+  .dispatch_chef_text_three {
+    display: none;
+  }
+  .dispatch_chef_text_btn {
+    display: none;
+  }
+  .chef_text_div {
+    display: none;
+  }
+  .dispatch_text_div {
+    display: none;
+  }
+  .orderedFood_div {
+    display: flex !important;
+    margin: 0 0 0 0 !important;
+  }
+  .restaurantDiv {
+    display: flex !important;
+    justify-content: center !important;
+  }
+} 
+
+ @media (max-width: 320px)  {
+  .curved_div {
+    display: none;
+  }
+  .eating_lady {
+    display: none;
+  }
+  .eating_pizza {
+    display: none;
+  }
+  .marquee {
+    display: none;
+  }
+  .feast {
+    text-align: center;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+  }
+  .order {
+    text-align: center;
+  }
+  .postcode {
+    text-align: center;
+  }
+  .hero_text {
+    padding-top: 50px !important;
+  }
+  .hero_div {
+    height: 350px;
+  }
+  .button_div {
+    display: flex;
+    justify-content: center;
+  }
+  .discount_button_div {
+    display: none;
+  }
+  .discount_text {
+    font-size: 11px !important;
+    font-weight: 600;
+    padding-top: 40px;
+  }
+  .option_button {
+    display: block;
+    height: 26px;
+    font-size: 12px;
+    margin-top: 40px;
+  }
+  .option {
+    font-size: 5px;
+  }
+  .discount_food {
+    height: 200px;
+    width: 100%;
+  }
+  .discountFood_img {
+    margin-top: 20px;
+  }
+
+  .order_food {
+    padding: 0px !important;
+    height: 100% !important;
+    width: 45% !important;
+    margin: 10px auto !important; 
+  }
+  .restaurantLogo {
+    padding: 0px !important;
+    height: 100% !important;
+    width: 45% !important;
+    margin: 10px auto !important; 
+  }
+  .second_hero_div {
+    height: 545px;
+    width: 100%;
+    border-radius: 17px;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    margin:auto !important;
+  }
+  
+  .second_hero_logo_div {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .second_hero_logo {
+    height: 30px !important;
+    width: 100px !important;
+    margin-top: 50px !important;
+  }
+  .img_text {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .img_text span {
+    font-size: 28px !important;
+    margin-top: 45px !important;
+  }
+
+  .personalised {
+    height: 50px;
+    width: 280px;
+    background-color: black;
+    border-radius: 70px 70px 70px 70px !important;
+    padding: 5px 0 0 0;
+  }
+  .download_text {
+    font-size: 14px !important;
+  }
+  .dowloandIcons {
+    height: 50px !important;
+    width: 250px !important;
+  }
+  .personalised span {
+    font-size: 20px !important;
+  }
+  .download_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 20px;
+  }
+  .chef {
+    display: none;
+  }
+  .dispatchRider {
+    display: none;
+  }
+  .dispatch_chef_text_one {
+    display: none;
+  }
+  .dispatch_chef_text_three {
+    display: none;
+  }
+  .dispatch_chef_text_btn {
+    display: none;
+  }
+  .chef_text_div {
+    display: none;
+  }
+  .dispatch_text_div {
+    display: none;
+  }
+  .orderedFood_div {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .restaurantDiv {
+    display: flex !important;
+    justify-content: center !important;
+  }
+} 
