@@ -112,12 +112,12 @@ const Navbar = () => {
                     Track Order
                   </a>
                 </li>
-              </ul>
-              <div>
+                <li className={`nav-item fw-bold ${styles.second_nav_list}`}>
                 <Link to={"/auth/signup"} className={`fw-medium ${styles.navbar_btn} ms-5`}>
                   Login/Signup
                 </Link>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </nav>
