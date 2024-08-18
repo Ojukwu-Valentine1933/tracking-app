@@ -1,5 +1,4 @@
 import eatingLady from "../../assets/woman-eating.png";
-// import eatingPizza from "../../assets/eating-pizza.png";
 import foodOne from "../../assets/food-one.png";
 import foodTwo from "../../assets/food-two.png";
 import foodThree from "../../assets/food-three.png";
@@ -15,11 +14,13 @@ import kfc from "../../assets/kfc.png";
 import texasChiken from "../../assets/Texas.png";
 import burgerKing from "../../assets/burger-chicken.png";
 import shaurma from "../../assets/shaurma.png";
-// import smilingFriends from "../../assets/friends-laughing-using-mobiles 2.png";
 import logo from "../../assets/LOGO 1.png";
 import styles from "./LandingPageComponent.module.css";
 import appDownload from "../../assets/app-store-badges-en 1.png";
-
+import smilingCouple from "../../assets/smiling_couple.png";
+import orderRingBell from "../../assets/oder-ring-bell.png";
+import trackProgress from "../../assets/track-progress.png";
+import getYourOrder from "../../assets/get-your-order.png";
 const LandingPageComponent = () => {
   return (
     <div className="">
@@ -27,29 +28,30 @@ const LandingPageComponent = () => {
         <div className={`bg-body-tertiary container  ${styles.hero_div}`}>
           <div className={`hero-intro container ${styles.hero_intro}`}>
             <div className={`${styles.hero_text}`}>
-              <p style={{ fontSize: "14px", marginTop: "20px" }} className={`${styles.order}`}>
+              <p
+                style={{ fontSize: "14px", marginTop: "20px" }}
+                className={`${styles.order}`}
+              >
                 Order Restaurant food, takeaway and groceries.
               </p>
               <h1
                 style={{
                   fontSize: "54px",
                   fontWeight: "600",
-                  lineHeight: "66px",
                 }}
                 className={`${styles.feast}`}
               >
                 Feast Your Senses,{" "}
-                <p
-                  style={{
-                    fontSize: "54px",
-                    fontWeight: "600",
-                    lineHeight: "66px",
-                    color: "#FF8F00",
-                  }}
-                  className={`${styles.feast}`}
-                >
-                  Fast and Fresh
-                </p>
+              </h1>
+              <h1
+                style={{
+                  fontSize: "54px",
+                  fontWeight: "600",
+                  color: "#FF8F00",
+                }}
+                className={`${styles.feast}`}
+              >
+                Fast and Fresh
               </h1>
             </div>
             <div className={`${styles.search_div}`}>
@@ -179,174 +181,110 @@ const LandingPageComponent = () => {
             </div>
           </div>
         </div>
+      </section>
 
+      <section className={`container`}>
         <div className={`mt-5`}>
           <div>
             <p className={`${styles.discount_text}`}>
               Order.uk Popular Categories 🤩
             </p>
           </div>
-          <div>
-            <div className={`row  gap- orderedFood_div ${styles.orderedFood_div}`}>
-              <div
-                className={`card col-sm-2 ${styles.order_food}`}
-                style={{ width: "100%" }}
-              >
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-6 mb-4">
+              <div className={`card`}>
                 <img
                   src={orderOne}
-                  className={`card-img-top ${styles.orderFood_img}`}
-                  alt="..."
+                  className={`card-img-top ${styles.card_img}`}
+                  alt="Card Image"
                 />
                 <div className="card-body">
-                  <h1
-                    className={``}
-                    style={{ fontSize: "12px", fontWeight: "700" }}
-                  >
-                    Burgers & Fast food
-                  </h1>
-                  <p
-                    style={{
-                      fontSize: "12px",
-                      fontWeight: "400",
-                      color: "#FF8F00",
-                    }}
-                  >
+                  <h5 className={`card-title ${styles.card_title}`}>
+                    Burgers & Chops
+                  </h5>
+                  <p className={`card-text ${styles.card_text}`}>
                     21 Restaurants
                   </p>
                 </div>
               </div>
-              <div
-                className={`card col-sm-2 ${styles.order_food}`}
-                style={{ width: "100%" }}
-              >
+            </div>
+            <div className="col-6 mb-4">
+              <div className={`card`}>
                 <img
                   src={orderTwo}
-                  className={`card-img-top ${styles.orderFood_img}`}
-                  alt="..."
+                  className={`card-img-top`}
+                  alt="Card Image"
                 />
                 <div className="card-body">
-                  <h1
-                    className={``}
-                    style={{ fontSize: "12px", fontWeight: "700" }}
-                  >
-                    Salads
-                  </h1>
-                  <p
-                    style={{
-                      fontSize: "12px",
-                      fontWeight: "400",
-                      color: "#FF8F00",
-                    }}
-                  >
-                    21 Restaurants
+                  <h5 className={`card-title ${styles.card_title}`}>Salads</h5>
+                  <p className={`card-text ${styles.card_text}`}>
+                    32 Restaurants
                   </p>
                 </div>
               </div>
-              <div
-                className={`card col-sm-2 ${styles.order_food}`}
-                style={{ width: "100%" }}
-              >
+            </div>
+            <div className="col-6 mb-4">
+              <div className={`card`}>
                 <img
                   src={orderThree}
-                  className={`card-img-top ${styles.orderFood_img}`}
-                  alt="..."
+                  className={`card-img-top`}
+                  alt="Card Image"
                 />
                 <div className="card-body">
-                  <h1
-                    className={``}
-                    style={{ fontSize: "12px", fontWeight: "700" }}
-                  >
+                  <h5 className={`card-title ${styles.card_title}`}>
                     Pasta & Casuals
-                  </h1>
-                  <p
-                    style={{
-                      fontSize: "12px",
-                      fontWeight: "400",
-                      color: "#FF8F00",
-                    }}
-                  >
-                    21 Restaurants
+                  </h5>
+                  <p className={`card-text ${styles.card_text}`}>
+                    4 Restaurants
                   </p>
                 </div>
               </div>
-              <div
-                className={`card col-sm-2 ${styles.order_food}`}
-                style={{ width: "100%" }}
-              >
+            </div>
+            <div className="col-6 mb-4">
+              <div className={`card`}>
                 <img
                   src={orderFour}
-                  className={`card-img-top ${styles.orderFood_img}`}
-                  alt="..."
+                  className={`card-img-top`}
+                  alt="Card Image"
                 />
                 <div className="card-body">
-                  <h1
-                    className={``}
-                    style={{ fontSize: "12px", fontWeight: "700" }}
-                  >
-                    Pizza
-                  </h1>
-                  <p
-                    style={{
-                      fontSize: "12px",
-                      fontWeight: "400",
-                      color: "#FF8F00",
-                    }}
-                  >
-                    21 Restaurants
+                  <h5 className={`card-title ${styles.card_title}`}>Pizza</h5>
+                  <p className={`card-text ${styles.card_text}`}>
+                    32 Restaurants
                   </p>
                 </div>
               </div>
-              <div
-                className={`card col-sm-2 ${styles.order_food}`}
-                style={{ width: "100%" }}
-              >
+            </div>
+            <div className="col-6 mb-4">
+              <div className={`card`}>
                 <img
                   src={orderFive}
-                  className={`card-img-top ${styles.orderFood_img}`}
-                  alt="..."
+                  className={`card-img-top`}
+                  alt="Card Image"
                 />
                 <div className="card-body">
-                  <h1
-                    className={``}
-                    style={{ fontSize: "12px", fontWeight: "700" }}
-                  >
+                  <h5 className={`card-title ${styles.card_title}`}>
                     Breakfast
-                  </h1>
-                  <p
-                    style={{
-                      fontSize: "12px",
-                      fontWeight: "400",
-                      color: "#FF8F00",
-                    }}
-                  >
-                    21 Restaurants
+                  </h5>
+                  <p className={`card-text ${styles.card_text}`}>
+                    4 Restaurants
                   </p>
                 </div>
               </div>
-              <div
-                className={`card col-sm-2 ${styles.order_food}`}
-                style={{ width: "100%" }}
-              >
+            </div>
+            <div className="col-6 mb-4">
+              <div className={`card`}>
                 <img
                   src={orderSix}
-                  className={`card-img-top ${styles.orderFood_img}`}
-                  alt="..."
+                  className={`card-img-top`}
+                  alt="Card Image/"
                 />
                 <div className="card-body">
-                  <h1
-                    className={``}
-                    style={{ fontSize: "12px", fontWeight: "700" }}
-                  >
-                    Soup
-                  </h1>
-                  <p
-                    style={{
-                      fontSize: "12px",
-                      fontWeight: "400",
-                      color: "#FF8F00",
-                    }}
-                  >
-                    21 Restaurants
+                  <h5 className={`card-title ${styles.card_title}`}>Soups</h5>
+                  <p className={`card-text ${styles.card_text}`}>
+                    32 Restaurants
                   </p>
                 </div>
               </div>
@@ -355,47 +293,66 @@ const LandingPageComponent = () => {
         </div>
       </section>
 
-      <section className={`container`}>
-        <div className={`row ${styles.restaurantDiv}`}>
-          <div className={`discount_text ${styles.discount_text}`}>
-            <p>Popular Restaurants</p>
-          </div>
-          <div className={`col-sm-2 ${styles.restaurantLogo}`}>
-            <div className="card" style={{ width: "100%" }}>
-              <img src={mcDonalds} className="card-img-top" alt="..." />
+      <section className={`container mt-5`}>
+        <div className="container">
+          <h1 className={`${styles.restaurantText}`}>Popular Restaurants</h1>
+          <div className="row">
+            <div className="col-6 mb-4">
+              <div className={`card`}>
+                <img
+                  src={mcDonalds}
+                  className="card-img-top"
+                  alt="Card Image"
+                />
+              </div>
             </div>
-          </div>
-          <div className={`col-sm-2 ${styles.restaurantLogo}`}>
-            <div className="card" style={{ width: "100%" }}>
-              <img src={papaJohns} className="card-img-top" alt="..." />
+            <div className="col-6 mb-4">
+              <div className={`card`}>
+                <img
+                  src={papaJohns}
+                  className="card-img-top"
+                  alt="Card Image"
+                />
+              </div>
             </div>
-          </div>
-          <div className={`col-sm-2 ${styles.restaurantLogo}`}>
-            <div className="card" style={{ width: "100%" }}>
-              <img src={kfc} className="card-img-top" alt="..." />
+            <div className="col-6 mb-4">
+              <div className={`card`}>
+                <img src={kfc} className="card-img-top" alt="Card Image" />
+              </div>
             </div>
-          </div>
-          <div className={`col-sm-2 ${styles.restaurantLogo}`}>
-            <div className="card" style={{ width: "100%" }}>
-              <img src={texasChiken} className="card-img-top" alt="..." />
+            <div className="col-6 mb-4">
+              <div className={`card`}>
+                <img
+                  src={texasChiken}
+                  className="card-img-top"
+                  alt="Card Image"
+                />
+              </div>
             </div>
-          </div>
-          <div className={`col-sm-2 ${styles.restaurantLogo}`}>
-            <div className="card" style={{ width: "100%" }}>
-              <img src={burgerKing} className="card-img-top" alt="..." />
+            <div className="col-6 mb-4">
+              <div className={`card`}>
+                <img
+                  src={burgerKing}
+                  className="card-img-top"
+                  alt="Card Image"
+                />
+              </div>
             </div>
-          </div>
-          <div className={`col-sm-2 ${styles.restaurantLogo}`}>
-            <div className="card" style={{ width: "100%" }}>
-              <img src={shaurma} className="card-img-top" alt="..." />
+            <div className="col-6 mb-4">
+              <div className={`card`}>
+                <img src={shaurma} className="card-img-top" alt="Card Image" />
+              </div>
             </div>
           </div>
         </div>
+        ;
       </section>
 
       <section className={`container m-auto`}>
         <div className={`bg-body-tertiary ${styles.second_hero_div}`}>
-          <div className={`d-flex justify-content-center ${styles.img_and_personalised}`}>
+          <div
+            className={`d-flex justify-content-center ${styles.img_and_personalised}`}
+          >
             <div className={`${styles.personalised_div}`}>
               <div className={`d-flex ${styles.img_text}`}>
                 <div
@@ -436,7 +393,6 @@ const LandingPageComponent = () => {
                     textDecoration: "underline",
                     fontSize: "40px",
                     fontWeight: "600",
-                    marginRight: "10px",
                   }}
                 >
                   Personalised
@@ -458,6 +414,12 @@ const LandingPageComponent = () => {
                     src={appDownload}
                     className={`${styles.dowloandIcons}`}
                     alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src={smilingCouple}
+                    className={`${styles.smilingCouple}`}
                   />
                 </div>
               </div>
@@ -486,7 +448,6 @@ const LandingPageComponent = () => {
               </div>
             </div>
           </div>
-
           <div className={`${styles.dispatchRider}`}>
             <div className={``}>
               <p className={`${styles.dispatch_chef_text_one}`}>
@@ -503,6 +464,101 @@ const LandingPageComponent = () => {
                   Get Started
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={`container`}>
+        <div className={`${styles.AboutUs_section_div}`}>
+          <h1>Know More About Us!</h1>
+          <button className={`${styles.AboutUs_section_button}`}>
+            How does Order.UK work?
+          </button>
+          <button className={`${styles.AboutUs_section_button}`}>
+            What payment methods are accepted?
+          </button>
+          <button className={`${styles.AboutUs_section_button}`}>
+            Can I track my order in real-time?
+          </button>
+          <button className={`${styles.AboutUs_section_button}`}>
+            Are there any special discounts orpromotions available?
+          </button>
+          <button className={`${styles.AboutUs_section_button}`}>
+            Is Order.UK available in my area?
+          </button>
+        </div>
+
+        <div className={`container`}>
+          <div className={`container ${styles.All_to_do_div}`}>
+            <div
+              className={`card ${styles.All_to_do_cards}`}
+              style={{ width: "18rem;" }}
+            >
+              <h5 className="card-title">Place an Order!</h5>
+              <div className={`${styles.All_to_do_cards_img_div}`}>
+                <img src={orderRingBell} className="card-img-top" alt="..." />
+              </div>
+              <div className="card-body">
+                <p className="card-text">
+                  Place order through ourwebsite or Mobile app
+                </p>
+              </div>
+            </div>{" "}
+            <div
+              className={`card ${styles.All_to_do_cards}`}
+              style={{ width: "18rem;" }}
+            >
+              <h5 className="card-title">Track Progress</h5>
+              <div className={`${styles.All_to_do_cards_img_div}`}>
+                <img src={trackProgress} className="card-img-top" alt="..." />
+              </div>
+              <div className="card-body">
+                <p className="card-text">
+                  Your can track your orderstatus with delivery time
+                </p>
+              </div>
+            </div>{" "}
+            <div
+              className={`card ${styles.All_to_do_cards}`}
+              style={{ width: "18rem;" }}
+            >
+              <h5 className="card-title">Get your Order!</h5>
+              <div className={`${styles.All_to_do_cards_img_div}`}>
+                <img src={getYourOrder} className="card-img-top" alt="..." />
+              </div>
+              <div className="card-body">
+                <p className="card-text">
+                  Receive your order at alighting fast speed!
+                </p>
+              </div>
+            </div>
+            <p
+              className={`text-white text-center`}
+              style={{ fontSize: "12px", marginTop: "30px" }}
+            >
+              Order.UK simplifies the food ordering process. Browse through our
+              diverse menu, select your favorite dishes, and proceed to
+              checkout. Your delicious meal will be on its way to your doorstep
+              in no time!
+            </p>
+          </div>
+          <div className={`${styles.statiscs}`}>
+            <div>
+            <p className={`${styles.statiscs_numbers}`}>546+</p>
+            <p className={`${styles.statiscs_text}`}>Registered Riders</p>
+            </div><div className={`${styles.hr_div}`}><hr/></div>
+            <div>
+            <p className={`${styles.statiscs_numbers}`}>789,900+</p>
+            <p className={`${styles.statiscs_text}`}>Orders Delivered</p><div className={`${styles.hr_div}`}><hr/></div>
+            </div>
+            <div>
+            <p className={`${styles.statiscs_numbers}`}>690+</p>
+            <p className={`${styles.statiscs_text}`}>Registered Partnered</p><div className={`${styles.hr_div}`}><hr/></div>
+            </div>
+            <div>
+            <p className={`${styles.statiscs_numbers}`}>17,457+</p>
+            <p className={`${styles.statiscs_text}`}>Food items</p>
             </div>
           </div>
         </div>
