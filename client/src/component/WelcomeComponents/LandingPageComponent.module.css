@@ -153,7 +153,7 @@
   margin: 20px 0 0 0 !important; /* Adjust the bottom margin to control spacing */
   /* border-radius: 10px; */
 }
-.chef_and_dispatch_div{
+.chef_and_dispatch_div {
   margin-top: 70px !important;
 }
 .dispatch_chef_text_one {
@@ -187,15 +187,15 @@
   border: 1px solid #ff8f00;
   text-align: center;
 }
-.AboutUs_section_div{
+.AboutUs_section_div {
   margin-top: 50px;
 }
-.AboutUs_section_div h1{
+.AboutUs_section_div h1 {
   font-size: 20px;
   font-weight: 800;
   text-align: center;
 }
-.AboutUs_section_button{
+.AboutUs_section_button {
   background-color: white;
   color: black;
   height: 40px;
@@ -207,43 +207,43 @@
   text-align: center;
   margin-top: 10px;
 }
-.AboutUs_section_button:hover{
+.AboutUs_section_button:hover {
   background-color: #ff8f00;
   color: black;
 }
-.All_to_do_div{
-  background-color: #03081F;
+.All_to_do_div {
+  background-color: #03081f;
   height: 1000px;
   width: 100%;
   padding: 50px 20px 20px 20px !important;
   margin-top: 50px;
   border-radius: 10px;
 }
-.All_to_do_cards{
-  background-color: #D9D9D9;
+.All_to_do_cards {
+  background-color: #d9d9d9;
   margin-top: 20px;
 }
-.All_to_do_cards h5{
+.All_to_do_cards h5 {
   font-size: 20px;
   font-weight: 800;
   text-align: center;
   margin-top: 20px;
 }
-.All_to_do_cards img{
-  height:100px;
+.All_to_do_cards img {
+  height: 100px;
   width: 100px;
   margin-top: 10px;
 }
-.All_to_do_cards_img_div{
+.All_to_do_cards_img_div {
   display: flex !important;
   justify-content: center !important;
 }
-.All_to_do_cards p{
+.All_to_do_cards p {
   font-size: 15px;
   text-align: center;
 }
-.statiscs{
-  background-color: #FC8A06;
+.statiscs {
+  background-color: #fc8a06;
   height: 630px;
   width: 100%;
   padding: 50px 20px 20px 20px !important;
@@ -251,29 +251,29 @@
   border-radius: 10px;
   text-align: center;
 }
-.statiscs hr{
+.statiscs hr {
   background-color: white !important;
   width: 130px;
   height: 1px;
   justify-content: center;
   color: white !important;
 }
-.statiscs p{
+.statiscs p {
   color: white;
 }
-.statiscs_numbers{
+.statiscs_numbers {
   font-size: 40px;
 }
-.statiscs_text{
+.statiscs_text {
   font-size: 18px;
   font-weight: 600;
 }
-.hr_div{
+.hr_div {
   display: flex !important;
   justify-content: center !important;
 }
 
- @media (min-width: 425px) {
+@media (min-width: 425px) {
   .hero_div {
     margin-top: 20px;
     height: 320px;
@@ -345,7 +345,7 @@
   .discountFood_img {
     margin-top: 50px;
   }
-  
+
   .card_title {
     font-size: 10px;
     font-weight: 600;
@@ -359,7 +359,7 @@
     font-size: 12px;
     font-weight: 900;
   }
-  
+
   .second_hero_div {
     height: 461px !important;
     width: 100%;
@@ -411,14 +411,13 @@
     background-image: url("../../assets/chef-mobile.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover ;
+    background-size: cover;
     height: 300px; /* Ensures a minimum height */
     width: 100% !important;
     margin: 0 !important;
     /* border-radius: 10px; */
   }
-  
-  
+
   .dispatchRider {
     background-image: url("../../assets/dispatch-mobile.png");
     background-repeat: no-repeat;
@@ -428,8 +427,8 @@
     width: 100% !important;
     margin: 20px 0 0 0 !important; /* Adjust the bottom margin to control spacing */
   }
- 
-  .chef_and_dispatch_div{
+
+  .chef_and_dispatch_div {
     margin-top: 70px !important;
     width: 100% !important;
   }
@@ -442,7 +441,6 @@
     width: 200px;
     text-align: center;
     margin-left: 30px;
-   
   }
   .dispatch_text_div {
     margin-left: 50px;
@@ -467,15 +465,15 @@
     text-align: center;
     position: relative;
   }
-  .AboutUs_section_div{
+  .AboutUs_section_div {
     margin-top: 50px;
   }
-  .AboutUs_section_div h1{
+  .AboutUs_section_div h1 {
     font-size: 20px;
     font-weight: 800;
     text-align: center;
   }
-  .AboutUs_section_button{
+  .AboutUs_section_button {
     background-color: white;
     color: black;
     height: 40px;
@@ -487,43 +485,43 @@
     text-align: center;
     margin-top: 10px;
   }
-  .AboutUs_section_button:hover{
+  .AboutUs_section_button:hover {
     background-color: #ff8f00;
     color: black;
   }
-  .All_to_do_div{
-    background-color: #03081F;
+  .All_to_do_div {
+    background-color: #03081f;
     height: 1000px;
     width: 100%;
     padding: 50px 20px 20px 20px !important;
     margin-top: 50px;
     border-radius: 10px;
   }
-  .All_to_do_cards{
-    background-color: #D9D9D9;
+  .All_to_do_cards {
+    background-color: #d9d9d9;
     margin-top: 20px;
   }
-  .All_to_do_cards h5{
+  .All_to_do_cards h5 {
     font-size: 20px;
     font-weight: 800;
     text-align: center;
     margin-top: 20px;
   }
-  .All_to_do_cards img{
-    height:100px;
+  .All_to_do_cards img {
+    height: 100px;
     width: 100px;
     margin-top: 10px;
   }
-  .All_to_do_cards_img_div{
+  .All_to_do_cards_img_div {
     display: flex !important;
     justify-content: center !important;
   }
-  .All_to_do_cards p{
+  .All_to_do_cards p {
     font-size: 15px;
     text-align: center;
   }
-  .statiscs{
-    background-color: #FC8A06;
+  .statiscs {
+    background-color: #fc8a06;
     height: 630px;
     width: 100%;
     padding: 50px 20px 20px 20px !important;
@@ -531,40 +529,37 @@
     border-radius: 10px;
     text-align: center;
   }
-  .statiscs hr{
+  .statiscs hr {
     background-color: white !important;
     width: 130px;
     height: 1px;
     justify-content: center;
     color: white !important;
   }
-  .statiscs p{
+  .statiscs p {
     color: white;
   }
-  .statiscs_numbers{
+  .statiscs_numbers {
     font-size: 40px;
   }
-  .statiscs_text{
+  .statiscs_text {
     font-size: 18px;
     font-weight: 600;
   }
-  .hr_div{
+  .hr_div {
     display: flex !important;
     justify-content: center !important;
   }
- }
-
-
-
-
-
-
+}
 
 /* Tablet and above */
 @media (min-width: 768px) {
   body {
     font-size: 18px;
     padding: 20px;
+  }
+  .discount_food {
+    height: 200px;
   }
 }
 
