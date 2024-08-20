@@ -30,7 +30,7 @@ const Footer = () => {
           <button className={`${styles.search_button}`}>Subscribe</button>
         </div>
         <p className={`${styles.span}`}>
-          we wont spam, read our <a href="#">email policy</a>
+          we wont spam, read our <a href="email-policy">email policy</a>
         </p>
 
         <div className={`${styles.social_icon_div}`}>

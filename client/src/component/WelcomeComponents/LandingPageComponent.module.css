@@ -273,7 +273,286 @@
   justify-content: center !important;
 }
 
-
+ @media (min-width: 425px) {
+  .hero_div {
+    margin-top: 20px;
+    height: 320px;
+    padding: 40px;
+  }
+  .order {
+    font-size: 12px !important;
+    text-align: center;
+  }
+  .curved_div {
+    display: none;
+  }
+  .eating_lady {
+    display: none;
+  }
+  .eating_pizza {
+    display: none;
+  }
+  .feast {
+    text-align: center;
+    font-size: 30px !important;
+  }
+  .postcode {
+    text-align: center;
+    font-size: 12px !important;
+  }
+  .button_div {
+    display: flex;
+    justify-content: center !important;
+  }
+  .search_input {
+    height: 40px;
+    width: 150px;
+    border-radius: 40px 0 0 40px;
+    border: 0.5px solid rgb(101, 100, 100);
+    /* padding-left: 20px; */
+  }
+  .search_button {
+    height: 40px;
+    width: 150px;
+    border-radius: 0 40px 40px 0;
+    background-color: #ff8f00;
+    color: white;
+    border: 3px solid #ff8f00;
+  }
+  .search_input::placeholder {
+    text-align: center;
+    font-size: 13px;
+  }
+  .discount_div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .discount_text {
+    font-size: 10px !important;
+    font-weight: 900;
+    padding-top: 40px;
+  }
+  .discount_button {
+    display: none;
+  }
+  .option_button {
+    display: block;
+    height: 26px;
+    font-size: 12px;
+    width: 60px;
+    margin-top: 40px;
+  }
+  .discountFood_img {
+    margin-top: 50px;
+  }
+  
+  .card_title {
+    font-size: 10px;
+    font-weight: 600;
+    color: #ff8f00 !important;
+  }
+  .card_text {
+    color: black;
+    font-size: 12px;
+  }
+  .restaurantText {
+    font-size: 12px;
+    font-weight: 900;
+  }
+  
+  .second_hero_div {
+    height: 461px !important;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .img_text {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  .img_text span {
+    font-size: 30px !important;
+    margin-top: 20px !important;
+  }
+  .second_hero_logo {
+    height: 30px !important;
+    width: 100px !important;
+    margin-top: 26px;
+  }
+  .personalised {
+    height: 50px;
+    width: 280px;
+    background-color: black;
+    border-radius: 70px 70px 70px 70px !important;
+    text-align: center !important;
+    padding-top: 3px;
+  }
+  .personalised span {
+    font-size: 20px !important;
+    text-align: center !important;
+  }
+  .download_text {
+    margin-top: 30px !important;
+  }
+  .parentPersonalised {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+  }
+  .dowloandIcons {
+    height: 50px !important;
+    width: 250px !important;
+  }
+  .smilingCouple {
+    height: 200px !important;
+    margin-top: 20px;
+  }
+  .chef {
+    background-image: url("../../assets/chef-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover ;
+    height: 300px; /* Ensures a minimum height */
+    width: 100% !important;
+    margin: 0 !important;
+    /* border-radius: 10px; */
+  }
+  
+  
+  .dispatchRider {
+    background-image: url("../../assets/dispatch-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px !important; /* Ensures a minimum height */
+    width: 100% !important;
+    margin: 20px 0 0 0 !important; /* Adjust the bottom margin to control spacing */
+  }
+ 
+  .chef_and_dispatch_div{
+    margin-top: 70px !important;
+    width: 100% !important;
+  }
+  .dispatch_chef_text_one {
+    background-color: white;
+    font-size: 12px;
+    border-radius: 0 0 5px 5px;
+    font-weight: 800;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    margin-left: 30px;
+   
+  }
+  .dispatch_text_div {
+    margin-left: 50px;
+    margin-top: 100px;
+  }
+  .dispatch_chef_text_two {
+    color: #ff8f00;
+  }
+  .dispatch_chef_text_three {
+    color: white;
+    position: relative;
+  }
+  .dispatch_chef_text_btn {
+    background-color: #ff8f00;
+    color: wheat;
+    height: 50px;
+    width: 140px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px 50px 50px 50px;
+    border: 1px solid #ff8f00;
+    text-align: center;
+    position: relative;
+  }
+  .AboutUs_section_div{
+    margin-top: 50px;
+  }
+  .AboutUs_section_div h1{
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+  }
+  .AboutUs_section_button{
+    background-color: white;
+    color: black;
+    height: 40px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50px 50px 50px 50px;
+    border: 1px solid white;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .AboutUs_section_button:hover{
+    background-color: #ff8f00;
+    color: black;
+  }
+  .All_to_do_div{
+    background-color: #03081F;
+    height: 1000px;
+    width: 100%;
+    padding: 50px 20px 20px 20px !important;
+    margin-top: 50px;
+    border-radius: 10px;
+  }
+  .All_to_do_cards{
+    background-color: #D9D9D9;
+    margin-top: 20px;
+  }
+  .All_to_do_cards h5{
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .All_to_do_cards img{
+    height:100px;
+    width: 100px;
+    margin-top: 10px;
+  }
+  .All_to_do_cards_img_div{
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .All_to_do_cards p{
+    font-size: 15px;
+    text-align: center;
+  }
+  .statiscs{
+    background-color: #FC8A06;
+    height: 630px;
+    width: 100%;
+    padding: 50px 20px 20px 20px !important;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .statiscs hr{
+    background-color: white !important;
+    width: 130px;
+    height: 1px;
+    justify-content: center;
+    color: white !important;
+  }
+  .statiscs p{
+    color: white;
+  }
+  .statiscs_numbers{
+    font-size: 40px;
+  }
+  .statiscs_text{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .hr_div{
+    display: flex !important;
+    justify-content: center !important;
+  }
+ }
 
 
 

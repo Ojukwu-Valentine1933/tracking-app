@@ -449,7 +449,7 @@ const LandingPageComponent = () => {
             </div>
           </div>
           <div className={`${styles.dispatchRider}`}>
-            <div className={``}>
+            <div className={`${styles.dispatch_content}`}>
               <p className={`${styles.dispatch_chef_text_one}`}>
                 Avail exclusive perks
               </p>
