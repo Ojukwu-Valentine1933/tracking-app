@@ -2,6 +2,7 @@ import Approute from "./Approute";
 import NavbarPage from "../pages/NavbarPage";
 import FooterPage from "../pages/FooterPage";
 
+
 const Layout = () => {
   return (
     <>

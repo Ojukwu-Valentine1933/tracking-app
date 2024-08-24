@@ -89,48 +89,63 @@
   height: 461px !important;
   width: 100%;
   border-radius: 10px;
+  padding: 50px 0 0 0;
 }
-.img_text {
+.couple_image{
   display: flex !important;
-  flex-direction: row !important;
   justify-content: center !important;
 }
-.img_text span {
-  font-size: 30px !important;
-  margin-top: 20px !important;
+.app_and_image{
+  display: flex;
+  flex-direction: column-reverse;
 }
-.second_hero_logo {
-  height: 30px !important;
-  width: 100px !important;
-  margin-top: 26px;
+.second_hero_logo{
+  height: 30px;
+  width: 100px;
 }
-.personalised {
-  height: 50px;
-  width: 280px;
-  background-color: black;
-  border-radius: 70px 70px 70px 70px !important;
-  text-align: center !important;
-  padding-top: 3px;
+.logo_and_text{
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
-.personalised span {
-  font-size: 20px !important;
+.logo_and_text span{
+  font-size: 25px ;
+  font-weight: 700 !important;
   text-align: center !important;
 }
-.download_text {
+
+.personalised_and_instant span{
+  text-align: center !important;
+  color: white;
+}
+.personalised_and_instant p {
   margin-top: 30px !important;
+  font-size: 12px !important;
 }
-.parentPersonalised {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center !important;
+.span_one{
+  color: #fc8a06 !important;
+  text-decoration: underline !important;
 }
-.dowloandIcons {
+.personalised_container{
+  display: flex;
+  justify-content: center;
+}
+.personalised_and_instant{
+  text-align: center !important;
   height: 50px !important;
   width: 250px !important;
-}
+  background-color: black !important;
+  border-radius: 50px 50px 50px 50px !important;
+  margin-top: 20px !important;
+  padding: 10px 0 0  0;
+ }
+ .download_icon{
+  height: 40px !important;
+  width: 200px !important;
+ }
 .smilingCouple {
   height: 200px !important;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 .chef {
   background-image: url("../../assets/chef-mobile.png");
@@ -309,7 +324,6 @@
     width: 150px;
     border-radius: 40px 0 0 40px;
     border: 0.5px solid rgb(101, 100, 100);
-    /* padding-left: 20px; */
   }
   .search_button {
     height: 40px;
@@ -377,7 +391,7 @@
   .second_hero_logo {
     height: 30px !important;
     width: 100px !important;
-    margin-top: 26px;
+    /* margin-top: 5px; */
   }
   .personalised {
     height: 50px;
@@ -405,7 +419,7 @@
   }
   .smilingCouple {
     height: 200px !important;
-    margin-top: 20px;
+    margin-top: 100px;
   }
   .chef {
     background-image: url("../../assets/chef-mobile.png");
@@ -565,8 +579,312 @@
 
 /* Desktop and above */
 @media (min-width: 1024px) {
-  body {
-    font-size: 20px;
-    padding: 30px;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+  .hero_div {
+    height: 640px;
+    width: 100%;
+    border-radius: 17px;
+    display: flex;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .order{
+    text-align: left;
+    font-size: 20px !important;
+  }
+  .feast{
+    text-align: left;
+    font-size: 50px !important;
+  }
+  .postcode{
+    text-align: left;
+    font-size: 20px !important;
+  }
+  .search_button {
+    height: 50px;
+    width: 150px;
+    border-radius: 0 40px 40px 0;
+    background-color: #ff8f00;
+    color: white;
+    border: 3px solid #ff8f00;
+  }
+  .button_div{
+    display: flex;
+    justify-content: left !important;
+  }
+  .search_input {
+    height: 50px;
+    width: 250px;
+    border-radius: 40px 0 0 40px;
+    border: 0.5px solid rgb(101, 100, 100);
+    padding-left: 20px;
+  }
+  .search_div {
+    margin-top: 30px;
+  }
+  .search_input::placeholder {
+    text-align: center;
+    font-size: 13px;
+  }
+  .hero_intro {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+  .hero_text {
+    padding-top: 150px;
+  }
+  .curved_div {
+    height: 550px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 300px 0 0 0;
+    background-color: #ff8f00;
+    display: flex;
+  }
+  .eating_noddles{
+    margin-top: 95px;
+  }
+  .marquee_container {
+    width: 100%;
+    margin-left: 10px;
+    overflow: hidden;     
+    position: relative;   /* Position relative to enable absolute positioning inside */
+  /* Optional background color */
+}
+
+.marquee_content {
+    position: absolute;
+    bottom: -100%;        /* Start the content below the container */
+    width: 100%;
+    animation: scroll-up 5s linear infinite; /* 5s duration, linear speed, infinite loop */
+}
+
+@keyframes scroll-up {
+    0% {
+        bottom: -100%;   /* Start outside the bottom */
+    }
+    100% {
+        bottom: 100%;    /* End outside the top */
+    }
+}
+
+  .discount_button_div {
+    display: flex;
+    justify-content: left !important;
+  }
+  .discount_div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .discount_button {
+    margin-left: 50px;
+    width: 150px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+  }
+  .discount_button:hover {
+    background-color: #ff8f00;
+    color: white;
+  }
+  .option_button {
+    display: none;
+  }
+  .discount_text {
+    font-weight: 800;
+    font-size: 25px !important;
+  }
+  .discount_food {
+    height: 300px;
+    width: 400px;
+  }
+  .discountFood_div {
+    margin-top: 50px;
+  }
+  .order_food {
+    padding: 0 !important;
+    height: 100px;
+    width: 180px !important;
+    margin: 20px;
+  }
+  .orderFood_img {
+    height: 150px;
+    width: 100%;
+  }
+  .restaurantText{
+    font-size: 25px;
+  }
+  .restaurantDiv {
+    margin-top: 50px !important;
+  }
+  .restaurantLogo {
+    padding: 0 !important;
+    height: 100px;
+    width: 180px !important;
+    margin: 20px;
+  }
+  .second_hero_div {
+    height: 400px;
+    width: 100%;
+    border-radius: 17px;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 0 0 0 !important;
+    margin-top: 100px !important;
+  }
+  
+  
+ .app_and_image{
+  display: flex !important;
+  flex-direction: row !important;
+ }
+ .smilingCouple{
+  height: 400px !important;
+  width: 500px !important;
+  right: 50% !important;
+  margin-top: 60px !important;
+ }
+
+ .second_hero_logo{
+  height: 31px !important;
+  width: 120px !important;
+ }
+ .logo_and_text{
+  display: flex !important;
+ }
+
+ .app_marketing span{
+  margin-top: 95px !important;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  /* display: flex; */
+ }
+ .personalised_and_instant span{
+  font-size: 25px !important;
+  color: white;
+  font-weight: 600;
+ }
+ .personalised_and_instant{
+  text-align: center !important;
+  height: 50px !important;
+  width: 300px !important;
+  background-color: black !important;
+  border-radius: 50px 50px 50px 50px !important;
+  margin-top: 20px !important;
+  padding: 0 0 0 0 !important;
+ }
+ .personalised_and_instant p {
+  font-size: 14px !important;
+  color: black !important;
+  margin-top: 10px !important;
+  margin-top: 20px 1;
+ }
+ .span_one{
+  color: #fc8a06 !important;
+  text-decoration: underline !important;
+ }
+.download_icon{
+  height: 40px !important;
+  width: 200px !important;
+}
+  .img_text {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: right !important;
+  }
+  .img_text span {
+    font-size: 20px !important;
+    margin-top: 20px !important;
+  }
+  .second_hero_logo {
+    height: 50px;
+    width: 230px;
+    margin-top: 100px !important;
+  }
+  .personalised_div {
+    display: flex !important;
+ 
+  }
+  .personalised {
+    height: 70px;
+    width: 550px;
+    background-color: black;
+    border-radius: 70px 70px 70px 70px;
+    text-align: right;
+    padding-right: 70px;
+    padding-top: 0px;
+    margin-top: 30px;
+  }
+  .download_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 20px;
+  }
+  .chef {
+    background-image: url("../../assets/chef.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 420px;
+    width: 100% !important;
+    border-radius: 10px;
+    margin: 70px 10px 0 0 !important;
+  }
+  .dispatchRider {
+    background-image: url("../../assets//dispatch-rider.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 420px !important;
+    width: 100%;
+    border-radius: 10px;
+    margin: 70px 0 0 10px !important;
+  }
+  
+  .chef_and_dispatch_div {
+    display: flex;
+  }
+  .dispatch_chef_text_one {
+    background-color: white;
+    font-size: 13px;
+    border-radius: 0 0 5px 5px;
+    font-weight: 800;
+    height: 30px;
+    width: 220px;
+    text-align: center;
+    margin-left: 70px;
+  }
+  .dispatch_chef_text_two {
+    color: #ff8f00;
+  }
+  .dispatch_chef_text_three {
+    color: white;
+  }
+  .dispatch_chef_text_btn {
+    background-color: #ff8f00;
+    color: wheat;
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px 50px 50px 50px;
+    border: 1px solid #ff8f00;
+    text-align: center;
+  }
+  .chef_text_div {
+    margin-left: 70px;
+  }
+  .dispatch_text_div {
+    margin-left: 70px;
+    margin-top: 200px;
+  }
+
 }

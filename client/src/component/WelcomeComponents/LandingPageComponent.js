@@ -1,4 +1,4 @@
-import eatingLady from "../../assets/woman-eating.png";
+import eatingNoddles from "../../assets/woman-eating.png";
 import foodOne from "../../assets/food-one.png";
 import foodTwo from "../../assets/food-two.png";
 import foodThree from "../../assets/food-three.png";
@@ -71,14 +71,10 @@ const LandingPageComponent = () => {
           </div>
           <div className="hero-img">
             <div className={`curved-div ${styles.curved_div}`}>
-              <div className={`${styles.hero_img}`}>
-                <img
-                  src={eatingLady}
-                  className={`${styles.eating_lady}`}
-                  alt=""
-                />
+              <div className={`${styles.eating_noddles}`}>
+                <img src={eatingNoddles} />
               </div>
-              <div className="scrolling-text">
+              <div className={`${styles.marquee_container}`}>
                 <ul
                   style={{
                     listStyle: "none",
@@ -86,6 +82,7 @@ const LandingPageComponent = () => {
                     fontWeight: "700",
                     color: "white",
                   }}
+                  className={`${styles.marquee_content}`}
                 >
                   <li>P</li>
                   <li>L</li>
@@ -102,6 +99,7 @@ const LandingPageComponent = () => {
                   <li>R</li>
                   <li>D</li>
                   <li>E</li>
+                  <li>R</li>
                   <li style={{ paddingBottom: "30px" }}> R</li>
                   <li> </li>
                   <li>N</li>
@@ -193,7 +191,7 @@ const LandingPageComponent = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={orderOne}
@@ -210,7 +208,7 @@ const LandingPageComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={orderTwo}
@@ -225,7 +223,7 @@ const LandingPageComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={orderThree}
@@ -242,7 +240,7 @@ const LandingPageComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={orderFour}
@@ -257,7 +255,7 @@ const LandingPageComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={orderFive}
@@ -274,7 +272,7 @@ const LandingPageComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={orderSix}
@@ -297,7 +295,7 @@ const LandingPageComponent = () => {
         <div className="container">
           <h1 className={`${styles.restaurantText}`}>Popular Restaurants</h1>
           <div className="row">
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={mcDonalds}
@@ -306,7 +304,7 @@ const LandingPageComponent = () => {
                 />
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={papaJohns}
@@ -315,12 +313,12 @@ const LandingPageComponent = () => {
                 />
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img src={kfc} className="card-img-top" alt="Card Image" />
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={texasChiken}
@@ -329,7 +327,7 @@ const LandingPageComponent = () => {
                 />
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img
                   src={burgerKing}
@@ -338,7 +336,7 @@ const LandingPageComponent = () => {
                 />
               </div>
             </div>
-            <div className="col-6 mb-4">
+            <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
                 <img src={shaurma} className="card-img-top" alt="Card Image" />
               </div>
@@ -350,81 +348,28 @@ const LandingPageComponent = () => {
 
       <section className={`container m-auto`}>
         <div className={`bg-body-tertiary ${styles.second_hero_div}`}>
-          <div
-            className={`d-flex justify-content-center ${styles.img_and_personalised}`}
-          >
-            <div className={`${styles.personalised_div}`}>
-              <div className={`d-flex ${styles.img_text}`}>
-                <div
-                  className={`second-hero-logo-div ${styles.second_hero_logo_div}`}
-                >
-                  <img
-                    src={logo}
-                    className={`${styles.second_hero_logo}`}
-                    alt=""
-                  />
-                </div>
-
-                <span
-                  className={``}
-                  style={{
-                    marginTop: "80px",
-                    fontSize: "58px",
-                    fontWeight: "800",
-                    marginRight: "20px",
-                  }}
-                >
-                  ing
-                </span>
-                <span
-                  style={{
-                    marginTop: "80px",
-                    fontSize: "58px",
-                    fontWeight: "800",
-                  }}
-                >
-                  is more{" "}
-                </span>
-              </div>
-              <div className={`${styles.personalised}`}>
-                <span
-                  style={{
-                    color: "#FF8F00",
-                    textDecoration: "underline",
-                    fontSize: "40px",
-                    fontWeight: "600",
-                  }}
-                >
-                  Personalised
-                </span>
-                <span
-                  style={{
-                    color: "white",
-                    fontSize: "40px",
-                    fontWeight: "600",
-                  }}
-                >
-                  & instant
-                </span>
-                <p className={`${styles.download_text}`}>
-                  Download the Order.uk app for faster ordering
-                </p>
-                <div>
-                  <img
-                    src={appDownload}
-                    className={`${styles.dowloandIcons}`}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    src={smilingCouple}
-                    className={`${styles.smilingCouple}`}
-                  />
-                </div>
-              </div>
+          <div className={`${styles.app_and_image}`}>
+            <div className={`couple_image ${styles.couple_image}`}>
+              <img src={smilingCouple} className={`${styles.smilingCouple}`} />
             </div>
+
+
+            <div className={`app_marketing ${styles.app_marketing}`}>
+            <div className={`${styles.logo_and_text}`}>
+            <img src={logo} className={`${styles.second_hero_logo}`}/>
+            <span className={``}>ing is more</span>
+            </div>
+            <div className={`${styles.personalised_container}`}>
+            <div className={`${styles.personalised_and_instant}`}>
+              <span className={`${styles.span_one}`}>Personalised</span> <span> & Instant</span>
+              <p>Download the Order.uk app for faster ordering</p>
+              <img src={appDownload} className={`${styles.download_icon}`}/>
+            </div>
+            </div>
+            </div>
+            
           </div>
+
         </div>
       </section>
 
@@ -545,20 +490,29 @@ const LandingPageComponent = () => {
           </div>
           <div className={`${styles.statiscs}`}>
             <div>
-            <p className={`${styles.statiscs_numbers}`}>546+</p>
-            <p className={`${styles.statiscs_text}`}>Registered Riders</p>
-            </div><div className={`${styles.hr_div}`}><hr/></div>
-            <div>
-            <p className={`${styles.statiscs_numbers}`}>789,900+</p>
-            <p className={`${styles.statiscs_text}`}>Orders Delivered</p><div className={`${styles.hr_div}`}><hr/></div>
+              <p className={`${styles.statiscs_numbers}`}>546+</p>
+              <p className={`${styles.statiscs_text}`}>Registered Riders</p>
+            </div>
+            <div className={`${styles.hr_div}`}>
+              <hr />
             </div>
             <div>
-            <p className={`${styles.statiscs_numbers}`}>690+</p>
-            <p className={`${styles.statiscs_text}`}>Registered Partnered</p><div className={`${styles.hr_div}`}><hr/></div>
+              <p className={`${styles.statiscs_numbers}`}>789,900+</p>
+              <p className={`${styles.statiscs_text}`}>Orders Delivered</p>
+              <div className={`${styles.hr_div}`}>
+                <hr />
+              </div>
             </div>
             <div>
-            <p className={`${styles.statiscs_numbers}`}>17,457+</p>
-            <p className={`${styles.statiscs_text}`}>Food items</p>
+              <p className={`${styles.statiscs_numbers}`}>690+</p>
+              <p className={`${styles.statiscs_text}`}>Registered Partnered</p>
+              <div className={`${styles.hr_div}`}>
+                <hr />
+              </div>
+            </div>
+            <div>
+              <p className={`${styles.statiscs_numbers}`}>17,457+</p>
+              <p className={`${styles.statiscs_text}`}>Food items</p>
             </div>
           </div>
         </div>
