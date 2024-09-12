@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware to enable CORS
 const corsOptions = {
-  origin: "https://tracking-app-ac71.onrender.com", // Specify the exact origin
+  origin: "https://tracking-app-roan.vercel.app", // Specify the exact origin
   credentials: true, // Allow credentials
 };
 
