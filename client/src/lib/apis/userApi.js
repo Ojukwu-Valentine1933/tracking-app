@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { setCurrentUser } from "../redux/userSlice";
 
-let baseUrl = process.env.REACT_APP_API_DEV_BASE_URL;
+let baseUrl = "https://tracking-app-ac71.onrender.com";
 
 export const userApi = createApi({
   reducerPath: "userApi",

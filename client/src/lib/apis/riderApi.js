@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-let baseUrl = process.env.REACT_APP_API_DEV_BASE_URL;
+let baseUrl = "https://tracking-app-ac71.onrender.com";
 
 export const riderApi = createApi({
   reducerPath: "riderApi",
