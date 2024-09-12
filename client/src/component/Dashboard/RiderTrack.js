@@ -18,7 +18,7 @@ const containerStyle = {
 
 // Optional styling for the polyline
 const options = {
-  strokeColor: "#333", // Red color
+  strokeColor: "#ba110b", // Red color
   strokeOpacity: 1.0,
   strokeWeight: 5,
 };
