@@ -1,14 +1,25 @@
 const express = require("express");
 const cors = require("cors");
 const userRoute = require("./routes/userRoute");
+const riderRoute = require("./routes/riderRoute");
+const trackRoute = require("./routes/trackRoute");
+const cookieParser = require("cookie-parser");
+const adminRoute = require("./routes/adminRoute");
 
 const app = express();
 
 // Middleware to enable CORS
-app.use(cors());
+const corsOptions = {
+  origin: "http://localhost:3000", // Specify the exact origin
+  credentials: true, // Allow credentials
+};
+
+app.use(cors(corsOptions));
 
 // Middleware to parse incoming request bodies as JSON
 app.use(express.json());
+
+app.use(cookieParser());
 
 // Test route to check if the server is running
 app.get("/", (req, res) => {
@@ -17,5 +28,11 @@ app.get("/", (req, res) => {
 
 // User routes
 app.use("/auth", userRoute);
+//Rider routes
+app.use("/riders", riderRoute);
+//Track routes
+app.use("/track", trackRoute);
+//Admin routes
+app.use("/admin", adminRoute);
 
 module.exports = app;

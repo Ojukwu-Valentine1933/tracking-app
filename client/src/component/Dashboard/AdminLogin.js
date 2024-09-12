@@ -8,14 +8,15 @@ const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const [loginUser, { isLoading, isSuccess }] = useLoginUserMutation();
+  const [loginUser, { isLoading,  isSuccess,  }] = useLoginUserMutation();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    return loginUser({ email, password });
+   return loginUser({email, password})
 
     // Perform login logic here
   };
@@ -34,6 +35,7 @@ const LoginForm = () => {
       <h3 className="mt-4 mb-4 fw-bold fs-2 fst-italic">
         Login To Get Started
       </h3>
+  
       <div className="mb-3">
         <input
           type="email"

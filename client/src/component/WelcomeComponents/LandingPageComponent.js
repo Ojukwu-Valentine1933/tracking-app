@@ -72,7 +72,7 @@ const LandingPageComponent = () => {
           <div className="hero-img">
             <div className={`curved-div ${styles.curved_div}`}>
               <div className={`${styles.eating_noddles}`}>
-                <img src={eatingNoddles} />
+                <img src={eatingNoddles} alt="lady eating noodles" />
               </div>
               <div className={`${styles.marquee_container}`}>
                 <ul
@@ -196,7 +196,7 @@ const LandingPageComponent = () => {
                 <img
                   src={orderOne}
                   className={`card-img-top ${styles.card_img}`}
-                  alt="Card Image"
+                  alt=""
                 />
                 <div className="card-body">
                   <h5 className={`card-title ${styles.card_title}`}>
@@ -213,7 +213,7 @@ const LandingPageComponent = () => {
                 <img
                   src={orderTwo}
                   className={`card-img-top`}
-                  alt="Card Image"
+                  alt=""
                 />
                 <div className="card-body">
                   <h5 className={`card-title ${styles.card_title}`}>Salads</h5>
@@ -228,7 +228,7 @@ const LandingPageComponent = () => {
                 <img
                   src={orderThree}
                   className={`card-img-top`}
-                  alt="Card Image"
+                  alt=""
                 />
                 <div className="card-body">
                   <h5 className={`card-title ${styles.card_title}`}>
@@ -245,7 +245,7 @@ const LandingPageComponent = () => {
                 <img
                   src={orderFour}
                   className={`card-img-top`}
-                  alt="Card Image"
+                  alt=""
                 />
                 <div className="card-body">
                   <h5 className={`card-title ${styles.card_title}`}>Pizza</h5>
@@ -260,7 +260,7 @@ const LandingPageComponent = () => {
                 <img
                   src={orderFive}
                   className={`card-img-top`}
-                  alt="Card Image"
+                  alt=""
                 />
                 <div className="card-body">
                   <h5 className={`card-title ${styles.card_title}`}>
@@ -300,7 +300,7 @@ const LandingPageComponent = () => {
                 <img
                   src={mcDonalds}
                   className="card-img-top"
-                  alt="Card Image"
+                  alt=""
                 />
               </div>
             </div>
@@ -309,13 +309,13 @@ const LandingPageComponent = () => {
                 <img
                   src={papaJohns}
                   className="card-img-top"
-                  alt="Card Image"
+                  alt=""
                 />
               </div>
             </div>
             <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
-                <img src={kfc} className="card-img-top" alt="Card Image" />
+                <img src={kfc} className="card-img-top" alt="" />
               </div>
             </div>
             <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
@@ -323,7 +323,7 @@ const LandingPageComponent = () => {
                 <img
                   src={texasChiken}
                   className="card-img-top"
-                  alt="Card Image"
+                  alt=""
                 />
               </div>
             </div>
@@ -332,13 +332,13 @@ const LandingPageComponent = () => {
                 <img
                   src={burgerKing}
                   className="card-img-top"
-                  alt="Card Image"
+                  alt=""
                 />
               </div>
             </div>
             <div className="col-6 col-sm-6 col-md-6 col-lg-2 mb-4">
               <div className={`card`}>
-                <img src={shaurma} className="card-img-top" alt="Card Image" />
+                <img src={shaurma} className="card-img-top" alt="" />
               </div>
             </div>
           </div>
@@ -350,20 +350,20 @@ const LandingPageComponent = () => {
         <div className={`bg-body-tertiary ${styles.second_hero_div}`}>
           <div className={`${styles.app_and_image}`}>
             <div className={`couple_image ${styles.couple_image}`}>
-              <img src={smilingCouple} className={`${styles.smilingCouple}`} />
+              <img src={smilingCouple} className={`${styles.smilingCouple}`} alt="" />
             </div>
 
 
             <div className={`app_marketing ${styles.app_marketing}`}>
             <div className={`${styles.logo_and_text}`}>
-            <img src={logo} className={`${styles.second_hero_logo}`}/>
+            <img src={logo} className={`${styles.second_hero_logo}`} alt=""/>
             <span className={``}>ing is more</span>
             </div>
             <div className={`${styles.personalised_container}`}>
             <div className={`${styles.personalised_and_instant}`}>
               <span className={`${styles.span_one}`}>Personalised</span> <span> & Instant</span>
               <p>Download the Order.uk app for faster ordering</p>
-              <img src={appDownload} className={`${styles.download_icon}`}/>
+              <img src={appDownload} className={`${styles.download_icon}`} alt=""/>
             </div>
             </div>
             </div>

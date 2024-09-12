@@ -1,17 +1,30 @@
 const User = require("../models/userModel");
 const transport = require("../smtpTransport/smptServer");
-const mongoose = require("mongoose");
 const generateToken = require("../helpers/recoverPasswordToken");
-const dotenv = require("dotenv");
-dotenv.config();
 const bcrypt = require("bcryptjs");
+const { generateWebToken } = require("../helpers/jwtHelpers");
+const {
+  JWT_SECRET,
+  ACCESS_TOKEN_EXPIRES_IN,
+  REFRESH_TOKEN_EXPIRES_IN,
+  ACCESS_TOKEN_SECRET,
+} = require("../config/dotEnv");
+const jwt = require("jsonwebtoken");
 
 const createNewUser = async (req, res) => {
   try {
-    const { firstName, lastName, email, password, confirmPassword } = req.body;
+    const { firstName, lastName, email, password, confirmPassword, type } =
+      req.body;
 
     // Check if all required fields are provided
-    if (!firstName || !lastName || !email || !password || !confirmPassword) {
+    if (
+      !firstName ||
+      !lastName ||
+      !email ||
+      !password ||
+      !confirmPassword ||
+      !type
+    ) {
       return res.status(400).json({ message: "All input fields are required" });
     }
 
@@ -23,16 +36,18 @@ const createNewUser = async (req, res) => {
     // Check if the user already exists
     const checkUserExist = await User.findOne({ email });
     if (checkUserExist) {
-      return res.status(400).json({ message: "User already exists. Please log in instead." });
+      return res
+        .status(400)
+        .json({ message: "User already exists. Please log in instead." });
     }
-   
+
     // Create a new user
     const newUser = new User({
-      _id: new mongoose.Types.ObjectId(),
       firstName,
       lastName,
       email,
       password, // Password will be hashed automatically due to pre-save hook
+      type,
     });
     const hashedPassword = await bcrypt.hash(password, 10);
     newUser.password = hashedPassword;
@@ -47,6 +62,7 @@ const createNewUser = async (req, res) => {
         firstName: savedUser.firstName,
         lastName: savedUser.lastName,
         email: savedUser.email,
+        type: savedUser.type,
         createdAt: savedUser.createdAt,
         updatedAt: savedUser.updatedAt,
       },
@@ -57,28 +73,46 @@ const createNewUser = async (req, res) => {
   }
 };
 
-
 // Remove the extra closing curly brace
 
 const userLogin = async (req, res) => {
   const { email, password } = req.body;
+
   try {
     if (!email || !password) {
       return res.status(400).json({ message: "All input fields are required" });
     }
 
-    const loginAttempt = await User.findOne({ email });
+    const loginAttempt = await User.findOne({ email }).exec();
+
     if (!loginAttempt) {
       return res.status(400).json({ message: "User not found" });
     }
 
-    console.log("Provided Password:", password);
-    console.log("Stored Hashed Password:", loginAttempt.password);
-
     const passwordMatch = await bcrypt.compare(password, loginAttempt.password);
-    console.log("passwordMatch", passwordMatch);
+
     if (passwordMatch) {
-      return res.status(200).json({ message: "Login Successful" });
+      const jwtPayload = {
+        userId: loginAttempt._id.toString(), // Ensure _id is converted to string if needed
+        email: loginAttempt.email,
+        type: loginAttempt.type,
+      };
+
+      const accessToken = generateWebToken(jwtPayload, "1h", JWT_SECRET);
+
+      const refreshToken = generateWebToken(jwtPayload, "7d", JWT_SECRET);
+
+      const cookieOptions = {
+        expires: new Date(Date.now() + 3600),
+        maxAge: 60 * 60 * 1000, // 1 hour
+        httpOnly: true,
+        secure: true,
+        sameSite: "none",
+      };
+
+      return res
+        .cookie("accessToken", accessToken, cookieOptions)
+        .json({ message: "Login Successful", refreshToken });
     } else {
       return res.status(400).json({ message: "Invalid email or password" });
     }
@@ -190,9 +224,117 @@ const verifyAndUpdatePassword = async (req, res) => {
   }
 };
 
+const getCurrentUser = async (req, res) => {
+  try {
+    const { userId } = req.user;
+    const user = await User.findById(userId).select("-password");
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    return res.status(200).json({ user });
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+    console.log(error);
+  }
+};
+
+const generateNewAccessToken = async (req, res) => {
+  try {
+    const headers = req.headers["authorization"];
+    if (!headers) {
+      return res.status(403).json({ error: "Authorization header missing" });
+    }
+
+    if (headers.split(" ")[0] !== "Bearer") {
+      return res.status(403).json({ error: "Invalid Token" });
+    }
+
+    // Get the refresh token
+    const refreshToken = headers.split(" ")[1];
+
+    // Verify the refresh token
+    const payload = jwt.verify(refreshToken, JWT_SECRET);
+    const userData = {
+      userId: payload.userId,
+      email: payload.email,
+      type: payload.type,
+    };
+
+    // Generate a new access token with 1hr validity period
+    const accessToken = generateWebToken(userData, "1h", JWT_SECRET);
+
+    if (!accessToken) {
+      return res.status(400).json({ error: "Token generation failed" });
+    }
+
+    // Set cookie options (cookie expires in 1 month)
+    const cookieOptions = {
+      expires: new Date(Date.now() + 3600), // 1 month in milliseconds
+      maxAge: 60 * 60 * 1000, // 1 hour
+      httpOnly: true,
+      sameSite: "none",
+      secure: true, // Ensure secure cookies in production
+    };
+
+    // Send success response with new access token and set it as a cookie
+    return res.cookie("accessToken", accessToken, cookieOptions).json({
+      message: "New access token generated successfully",
+      accessToken,
+    });
+  } catch (error) {
+    if (error.name === "TokenExpiredError") {
+      return res
+        .status(403)
+        .json({ error: "Refresh token expired, please login again" });
+    }
+
+    res.status(500).json({ error: "Internal Server Error" });
+    console.log(error);
+  }
+};
+
+const logOutUser = async (req, res) => {
+  try {
+    return res
+      .clearCookie("accessToken")
+      .json({ message: "logged out successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+const verifyUserAccount = async (req, res) => {
+  try {
+    const { verificationToken } = req.body;
+
+    // check for user with verifification token
+    const user = await User.findOne({ verificationToken });
+
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    // verify user account
+    // change verification status from false to true
+    user.isVerified = true;
+    // delete verification token from user object
+    user.verificationToken = undefined;
+
+    // save user object
+    await user.save();
+
+    return res.status(200).json({ message: "user verification successful" });
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
 module.exports = {
   createNewUser,
   userLogin,
   forgottenPassword,
   verifyAndUpdatePassword,
+  getCurrentUser,
+  generateNewAccessToken,
+  logOutUser,
+  verifyUserAccount,
 };

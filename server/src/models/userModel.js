@@ -26,6 +26,15 @@ const userSchema = new mongoose.Schema(
     passwordResetExpires: {
       type: Date,
     },
+    type: {
+      type: String,
+      required: true,
+    },
+
+    onTransit: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,

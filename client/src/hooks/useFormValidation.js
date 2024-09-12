@@ -1,12 +1,12 @@
 import { useEffect, useState, useCallback } from "react";
 
 const useFormValidation = (
-  firstName,
-  lastName,
-  email,
-  mobileNumber,
-  password,
-  confirmPassword
+  firstName = "",
+  lastName = "",
+  email = "",
+  password = "",
+  confirmPassword = "",
+  type = ""
 ) => {
   const [formIsValid, setFormIsValid] = useState(false);
   const [formError, setFormError] = useState("");
@@ -24,14 +24,10 @@ const useFormValidation = (
 
     if (!email.trim()) {
       errors.push("Email is required");
-    } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i.test(email)) {
+    } else if (
+      !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i.test(email)
+    ) {
       errors.push("Invalid email address");
-    }
-
-    if (!mobileNumber.trim()) {
-      errors.push("Mobile number is required");
-    } else if (!/^\d{11}$/i.test(mobileNumber)) {
-      errors.push("Invalid mobile number");
     }
 
     if (!password.trim()) {
@@ -51,10 +47,13 @@ const useFormValidation = (
     } else if (confirmPassword !== password) {
       errors.push("Passwords do not match");
     }
+    if (!type.trim()) {
+      errors.push("Type is required");
+    }
 
     setFormError(errors.join(", "));
     setFormIsValid(errors.length === 0);
-  }, [firstName, lastName, email, mobileNumber, password, confirmPassword]);
+  }, [firstName, lastName, email, password, confirmPassword, type]);
 
   useEffect(() => {
     checkIfFormIsValid();

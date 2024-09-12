@@ -1,9 +1,11 @@
 import Approute from "./Approute";
 import NavbarPage from "../pages/NavbarPage";
 import FooterPage from "../pages/FooterPage";
-
+import { useLocation } from "react-router-dom";
 
 const Layout = () => {
+  const location = useLocation();
+  const { pathname } = location;
   return (
     <>
       <header>
@@ -13,7 +15,10 @@ const Layout = () => {
         <Approute />
       </main>
       <footer>
-        <FooterPage />
+        {pathname === "/dashboard" ||
+        pathname.startsWith("/dashboard") ? null : (
+          <FooterPage />
+        )}
       </footer>
     </>
   );

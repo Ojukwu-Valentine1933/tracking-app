@@ -28,9 +28,10 @@
 padding-right: 20px;
 }
 
+
 .navbar_btn{
-    height: 50px;
-    width: 250px;
+    height: 40px !important;
+    width: 150px;
     border-radius: 40px;
     background-color: black;
     color: white;
@@ -48,6 +49,9 @@ padding-right: 20px;
     .app_logo{
         height: 50px;
         width: 120px;
+    }
+    .navbarNav{
+        height: 500px !important;
     }
   }
   @media (max-width: 1024px) {

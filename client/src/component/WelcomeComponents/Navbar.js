@@ -1,12 +1,19 @@
+import { useState, useEffect, useCallback } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useGetCurrentUserMutation } from "../../lib/apis/userApi";
+import { useLogoutUserMutation } from "../../lib/apis/authapi";
 import star from "../../assets/star-icon.png";
 import styles from "./Navbar.module.css";
 import location from "../../assets/Location.png";
 import logo from "../../assets/LOGO 1.png";
-import { useState, useEffect, useCallback } from "react";
 
 const Navbar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const [getCurrentUser] = useGetCurrentUserMutation();
+  const [logoutUser, isSuccess] = useLogoutUserMutation();
+
+  const { user } = useSelector((state) => state.userState);
 
   // Use useCallback to memoize the handleScroll function
   const handleScroll = useCallback(() => {
@@ -25,6 +32,10 @@ const Navbar = () => {
   const toggleNavbar = () => {
     setIsCollapsed(!isCollapsed);
   };
+
+  useEffect(() => {
+    getCurrentUser();
+  }, [isSuccess]);
 
   return (
     <>
@@ -83,8 +94,10 @@ const Navbar = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div
-              className={`collapse navbar-collapse ms-5 ${isCollapsed ? "" : "show"}`}
-              id="navbarNav"
+              className={`collapse navbar-collapse ms-5 ${
+                isCollapsed ? "" : "show"
+              }`}
+              id={`navbarNav ${styles.navbarNav}`}
             >
               <ul className="navbar-nav">
                 <li className={`nav-item fw-bold ${styles.second_nav_list}`}>
@@ -113,9 +126,29 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className={`nav-item fw-bold ${styles.second_nav_list}`}>
-                <Link to={"/auth/signup"} className={`fw-medium ${styles.navbar_btn} ms-5`}>
-                  Login/Signup
-                </Link>
+                  {!user && (
+                    <Link to={"/auth/signup"} className={`btn btn-warning`}>
+                      Login/Signup
+                    </Link>
+                  )}
+
+                  {user && user.type === "admin" && (
+                    <Link to={"/dashboard"} className={`btn btn-warning`}>
+                      Dashboard
+                    </Link>
+                  )}
+                </li>
+
+                <li className={`nav-item fw-bold ${styles.second_nav_list}`}>
+                  {user && (
+                    <Link
+                      to=""
+                      className={`btn btn-danger`}
+                      onClick={() => logoutUser()}
+                    >
+                      Logout
+                    </Link>
+                  )}
                 </li>
               </ul>
             </div>
